@@ -18,3 +18,9 @@ def sales_by_city():
         return {"data": result}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+# Azure auto-start
+if __name__ == "__main__":
+    import uvicorn
+    # Listen on all interfaces, port 8000
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
