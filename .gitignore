@@ -1,0 +1,4 @@
+test_app_env
+New folder
+*.env
+*__pycache__
