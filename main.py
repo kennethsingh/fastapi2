@@ -4,6 +4,10 @@ import uvicorn
 
 app = FastAPI()
 
+@app.get('/')
+def home_page():
+    return 'This is the home page'
+
 @app.get("/sales_by_city")
 def sales_by_city():
     query = """
