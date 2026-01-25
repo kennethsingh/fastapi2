@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from utils import run_query
+import uvicorn
 
 app = FastAPI()
 
@@ -21,6 +22,5 @@ def sales_by_city():
 
 # Azure auto-start
 if __name__ == "__main__":
-    import uvicorn
     # Listen on all interfaces, port 8000
-    uvicorn.run("main:app", host="0.0.0.0", port=8000, log_level="info")
+    uvicorn.run('main:app')
